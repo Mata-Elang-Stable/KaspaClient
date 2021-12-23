@@ -53,8 +53,8 @@ def index():
 #        #Check per sensors
 #        url_check = "http://{}/api/sensor/v1.0/checkstatus/{}".format(os.environ.get('API_HOST'), data['sensors'][i]['device_id'])
 #        r_check = requests.post(url_check, auth=(session['token'], "pass"))
-        data_check = json.loads(r_check.text)
-        data['sensors'][i]['status'] = data_check['status']
+#        data_check = json.loads(r_check.text)
+#        data['sensors'][i]['status'] = data_check['status']
 
     return render_template(
         'index.html', 
